@@ -33,19 +33,18 @@ button {
 	font-size: 18px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	border: 1px solid;
 	cursor: pointer;
 }
 
-
+button:hover{
+	background-color: white;
+	color: black;
+	border: 1px solid;
+}
 
 h1 {
 	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
 		1px 1px 0 #fff;
 	text-align: center;
-}
-li{
-  list-style: none;
-  display: inline-block;
-  margin-left: 30px;
-
 }
