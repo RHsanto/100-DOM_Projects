@@ -11,26 +11,13 @@ window.onload = () => {
 };
 
 function main() {
-	// const root = document.getElementById('root');
-	const btn = document.getElementById('btn');
-	const btn2 = document.getElementById('btn2');
-	const btn3 = document.getElementById('btn3');
+	 const root = document.getElementById('root');
+	 root.addEventListener('click', function () {
+		const bgColor = generateRGBColor();
+		root.style.backgroundColor = bgColor;
+		
+	});
 
-	btn.addEventListener('click', function () {
-		const bgColor = generateRGBColor();
-		btn.style.backgroundColor = bgColor;
-		
-	});
-	btn2.addEventListener('click', function () {
-		const bgColor = generateRGBColor();
-		btn2.style.backgroundColor = bgColor;
-		
-	});
-	btn3.addEventListener('click', function () {
-		const bgColor = generateRGBColor();
-		btn3.style.backgroundColor = bgColor;
-		
-	});
 }
 
 // step 2 - random color generator function
@@ -39,10 +26,19 @@ function generateRGBColor() {
 	const red = Math.floor(Math.random() * 205);
 	const green = Math.floor(Math.random() *300);
 	const blue = Math.floor(Math.random() * 155);
-
 	return `rgb(${red}, ${green}, ${blue})`;
 }
 
 // step 3 - collect all necessary references
 
 // step 4 - handle the click event
+
+ const array = [];
+ array[5]=6;
+ array[50]=60;
+ array[99]=100;
+ array[150]=166;
+
+ console.log(array.length);
+console.log(array);
+ 
