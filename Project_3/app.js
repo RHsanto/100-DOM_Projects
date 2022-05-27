@@ -15,31 +15,44 @@ function main(){
  const output2 = document.getElementById('output2')
  const output3 = document.getElementById('output3')
  const output4 = document.getElementById('output4')
+ const copyBtn1 = document.getElementById('copy-btn1')
+ const copyBtn2 = document.getElementById('copy-btn2')
+ const copyBtn3 = document.getElementById('copy-btn3')
+ const copyBtn4 = document.getElementById('copy-btn4')
 
 
  button1.addEventListener('click',function(){
   output1.value=createColor();
   items1.style.backgroundColor=createColor()
-
-  
  })
+
  button2.addEventListener('click',function(){
   output2.value=createColor();
   items2.style.backgroundColor=createColor()
-
-
  })
+
  button3.addEventListener('click',function(){
   output3.value=createColor();
   items3.style.backgroundColor=createColor()
-
-  
  })
+
  button4.addEventListener('click',function(){
   output4.value=createColor();
   items4.style.backgroundColor=createColor()
-  
  })
+
+ copyBtn1.addEventListener('click',function(){
+  navigator.clipboard.writeText(output1.value)
+})
+copyBtn2.addEventListener('click',function(){
+  navigator.clipboard.writeText(output2.value)
+})
+copyBtn3.addEventListener('click',function(){
+  navigator.clipboard.writeText(output3.value)
+})
+copyBtn4.addEventListener('click',function(){
+  navigator.clipboard.writeText(output4.value)
+})
 }
 
 
