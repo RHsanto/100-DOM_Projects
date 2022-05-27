@@ -48,3 +48,14 @@ h1 {
 		1px 1px 0 #fff;
 	text-align: center;
 }
+
+/* items */
+
+#items{
+	border: 1px solid ;
+  margin: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+}
