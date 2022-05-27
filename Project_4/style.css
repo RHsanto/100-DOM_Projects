@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+
+#items-btn button {
+	padding: 1rem 3rem;
+	margin: 1rem 0;
+	outline: none;
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 0.25rem;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border: 1px solid;
+	cursor: pointer;
+}
+
+#items-btn button:hover{
+	background-color: white;
+	color: black;
+	border: 1px solid;
+}
+
+h1 {
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+		1px 1px 0 #fff;
+	text-align: center;
+}
+
+/* items */
+
+.items{
+	border: 1px solid ;
+  margin: 100px;
+  display: grid;
+	grid-template-columns: auto auto auto auto;
+	padding: 10px;
+	text-align: center;
+	gap: 20px;
+}
+
+.input-items{
+	margin: 100px;
+  display: grid;
+	grid-template-columns: auto auto auto auto;
+	padding: 10px;
+	text-align: center;
+	gap: 20px;
+}
+.input-items button{
+	padding: 10px;
+	cursor: pointer;
+}
+#item1,#item2,#item3,#item4{
+	border: 1px solid;
+	padding: 50px;
+}
+
+#items-btn{
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.input{
+width: 200px;
+margin: 0 auto;
+}
+input{
+	padding: 10px;
+}
+
+/* toast msg css */
+
+.toast-message {
+	position: fixed;
+	z-index: 999;
+	top: 1rem;
+	right: 40%;
+	background-color: #0DC143;
+	color: rgb(255, 255, 255);
+	border-radius: 0.25rem;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+ .toast-message-slide-in {
+	animation: toast-animation-in 0.5s ease-in;
+}
+
+.toast-message-slide-out {
+	animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-animation-in {
+	from {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes toast-animation-out {
+	from {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+} 
