@@ -97,7 +97,7 @@ function createColor(){
 //  crete toast message
 
 function generateToastMessage(msg){
- div = document.createElement('div')
+  div = document.createElement('div')
   div.innerText=msg
   div.className= 'toast-message toast-message-slide-in';
   div.addEventListener('click',function(){
