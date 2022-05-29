@@ -52,7 +52,12 @@ function main(){
  div.remove();
  div = null;
   }
+ if(isValid(output1.value)){
   generateToastMessage(`${output1.value} copied`)
+ }
+ else{
+   alert(' Invalid Color Code')
+ }
 })
 // copy btn-2
 copyBtn2.addEventListener('click',function(){
@@ -61,7 +66,12 @@ copyBtn2.addEventListener('click',function(){
  div.remove();
  div = null;
   }
-  generateToastMessage(`${output2.value} copied`)
+  if(isValid(output2.value)){
+    generateToastMessage(`${output2.value} copied`)
+   }
+   else{
+     alert(' Invalid Color Code')
+   }
 })
 // copy btn-3
 copyBtn3.addEventListener('click',function(){
@@ -70,7 +80,12 @@ copyBtn3.addEventListener('click',function(){
  div.remove();
  div = null;
   }
-  generateToastMessage(`${output3.value} copied`)
+  if(isValid(output3.value)){
+    generateToastMessage(`${output3.value} copied`)
+   }
+   else{
+     alert(' Invalid Color Code')
+   }
 })
 
 // copy btn-4
@@ -80,8 +95,39 @@ copyBtn4.addEventListener('click',function(){
  div.remove();
  div = null;
   }
-  generateToastMessage(`${output4.value} copied`)
+  if(isValid(output4.value)){
+    generateToastMessage(`${output4.value} copied`)
+   }
+   else{
+     alert(' Invalid Color Code')
+   }
 })
+
+output1.addEventListener('keyup',function(e){
+  const color = e.target.value
+  if(color && isValid(color)){
+    items1.style.backgroundColor = color;
+  }
+})
+output2.addEventListener('keyup',function(e){
+  const color = e.target.value
+  if(color && isValid(color)){
+    items2.style.backgroundColor = color;
+  }
+})
+output3.addEventListener('keyup',function(e){
+  const color = e.target.value
+  if(color && isValid(color)){
+    items3.style.backgroundColor = color;
+  }
+})
+output4.addEventListener('keyup',function(e){
+  const color = e.target.value
+  if(color && isValid(color)){
+    items4.style.backgroundColor = color;
+  }
+})
+
 }
 
 
@@ -109,5 +155,18 @@ function generateToastMessage(msg){
       div = null;
     })
   })
-  document.body.appendChild(div)
+  document.body.appendChild(div);
+
+}
+
+// hex color
+
+/**
+* @param {string} color 
+*/
+function isValid(color){
+  if(color.length !==7)return false;
+  if(color[0] !=='#')return false;
+  color = color.substring(1)
+  return /^[0-9A-Fa-f]{6}$/i.test(color);
 }
