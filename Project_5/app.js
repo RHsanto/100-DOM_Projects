@@ -45,7 +45,6 @@ function main(){
   items4.style.backgroundColor=createColor()
  })
 
- // copy btn-1
  copyBtn1.addEventListener('click',function(){
   navigator.clipboard.writeText(output1.value);
   if(div !== null){
@@ -54,33 +53,14 @@ function main(){
   }
   generateToastMessage(`${output1.value} copied`)
 })
-// copy btn-2
 copyBtn2.addEventListener('click',function(){
-  navigator.clipboard.writeText(output2.value);
-  if(div !== null){
- div.remove();
- div = null;
-  }
-  generateToastMessage(`${output2.value} copied`)
+  navigator.clipboard.writeText(output2.value)
 })
-// copy btn-3
 copyBtn3.addEventListener('click',function(){
-  navigator.clipboard.writeText(output3.value);
-  if(div !== null){
- div.remove();
- div = null;
-  }
-  generateToastMessage(`${output3.value} copied`)
+  navigator.clipboard.writeText(output3.value)
 })
-
-// copy btn-4
 copyBtn4.addEventListener('click',function(){
-  navigator.clipboard.writeText(output4.value);
-  if(div !== null){
- div.remove();
- div = null;
-  }
-  generateToastMessage(`${output4.value} copied`)
+  navigator.clipboard.writeText(output4.value)
 })
 }
 
